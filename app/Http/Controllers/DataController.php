@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Dudi;
 use App\Models\Guru;
+use App\Models\Kelas;
 use App\Models\Siswa;
 use Illuminate\Http\Request;
 
@@ -13,12 +14,13 @@ class DataController extends Controller
     public function indexSiswa()
     {
         $siswa = Siswa::all();
-        return view('layouts.siswa.index', ['siswa' => $siswa]);
+        return view('layouts.manajemen.siswa.index', ['siswa' => $siswa]);
     }
 
     public function createSiswa()
     {
-        return view('layouts.siswa.create');
+        $dataKelas = Kelas::all();
+        return view('layouts.manajemen.siswa.create', ['dataKelas' => $dataKelas]);
     }
     public function storeSiswa(Request $request)
     {
@@ -34,8 +36,9 @@ class DataController extends Controller
     }
     public function editSiswa($id)
     {
+        $dataKelas = Kelas::all();
         $siswa = Siswa::find($id);
-        return view('layouts.siswa.edit', compact(['siswa']));
+        return view('layouts.manajemen.siswa.edit', ['siswa' => $siswa, 'dataKelas' => $dataKelas]);
     }
     public function updateSiswa($id, Request $request)
     {
@@ -55,12 +58,12 @@ class DataController extends Controller
     public function indexGuru()
     {
         $guru = Guru::all();
-        return view('layouts.guru.index', ['guru' => $guru]);
+        return view('layouts.manajemen.guru.index', ['guru' => $guru]);
     }
 
     public function createGuru()
     {
-        return view('layouts.guru.create');
+        return view('layouts.manajemen.guru.create');
     }
     public function storeGuru(Request $request)
     {
@@ -76,7 +79,7 @@ class DataController extends Controller
     public function editGuru($id)
     {
         $guru = Guru::find($id);
-        return view('layouts.guru.edit', compact(['guru']));
+        return view('layouts.manajemen.guru.edit', compact(['guru']));
     }
     public function updateGuru($id, Request $request)
     {
@@ -96,12 +99,12 @@ class DataController extends Controller
     public function indexDudi()
     {
         $dudi = Dudi::all();
-        return view('layouts.dudi.index', ['dudi' => $dudi]);
+        return view('layouts.manajemen.dudi.index', ['dudi' => $dudi]);
     }
 
     public function createDudi()
     {
-        return view('layouts.dudi.create');
+        return view('layouts.manajemen.dudi.create');
     }
     public function storeDudi(Request $request)
     {
@@ -116,7 +119,7 @@ class DataController extends Controller
     public function editDudi($id)
     {
         $dudi = Dudi::find($id);
-        return view('layouts.dudi.edit', compact(['dudi']));
+        return view('layouts.manajemen.dudi.edit', compact(['dudi']));
     }
     public function updateDudi($id, Request $request)
     {

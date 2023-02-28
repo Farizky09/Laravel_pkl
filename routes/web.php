@@ -30,28 +30,28 @@ Route::middleware('auth')->group(function () {
 
 
     //Siswa
-    Route::get('/siswa', [DataController::class, 'indexSiswa'])->name('siswa');
-    Route::get('/siswa/create', [DataController::class, 'createSiswa']);
-    Route::post('/siswa/store', [DataController::class, 'storeSiswa']);
-    Route::get('/siswa/edit/{id}', [DataController::class, 'editSiswa']);
-    Route::post('/siswa/update/{id}', [DataController::class, 'updateSiswa']);
-    Route::get('/siswa/delete/{id}', [DataController::class, 'deleteSiswa']);
+    Route::get('siswa', [DataController::class, 'indexSiswa'])->name('siswa');
+    Route::get('siswa-create', [DataController::class, 'createSiswa'])->name('siswa-create');
+    Route::post('siswa-create', [DataController::class, 'storeSiswa'])->name('siswa-create');
+    Route::get('siswa-edit/{id}', [DataController::class, 'editSiswa'])->name('siswa-edit');
+    Route::post('siswa-edit/{id}', [DataController::class, 'updateSiswa'])->name('siswa-edit');
+    Route::get('siswa-delete/{id}', [DataController::class, 'deleteSiswa'])->name('siswa-delete');
 
     //Guru
-    Route::get('/guru', [DataController::class, 'indexGuru'])->name('guru');
-    Route::get('/guru/create', [DataController::class, 'createGuru']);
-    Route::post('/guru/store', [DataController::class, 'storeGuru']);
-    Route::get('/guru/edit/{id}', [DataController::class, 'editGuru']);
-    Route::post('/guru/update/{id}', [DataController::class, 'updateGuru']);
-    Route::get('/guru/delete/{id}', [DataController::class, 'deleteGuru']);
+    Route::get('guru', [DataController::class, 'indexGuru'])->name('guru');
+    Route::get('guru-create', [DataController::class, 'createGuru'])->name('guru-create');
+    Route::post('guru-create', [DataController::class, 'storeGuru'])->name('guru-create');
+    Route::get('guru-edit/{id}', [DataController::class, 'editGuru'])->name('guru-edit');
+    Route::post('guru-edit/{id}', [DataController::class, 'updateGuru'])->name('guru-edit');
+    Route::get('guru-delete/{id}', [DataController::class, 'deleteGuru'])->name('guru-delete');
 
     //Dudi
-    Route::get('/dudi', [DataController::class, 'indexDudi'])->name('dudi');
-    Route::get('/dudi/create', [DataController::class, 'createDudi']);
-    Route::post('/dudi/store', [DataController::class, 'storeDudi']);
-    Route::get('/dudi/edit/{id}', [DataController::class, 'editDudi']);
-    Route::post('/dudi/update/{id}', [DataController::class, 'updateDudi']);
-    Route::get('/dudi/delete/{id}', [DataController::class, 'deleteDudi']);
+    Route::get('dudi', [DataController::class, 'indexDudi'])->name('dudi');
+    Route::get('dudi-create', [DataController::class, 'createDudi'])->name('dudi-create');
+    Route::post('dudi-create', [DataController::class, 'storeDudi'])->name('dudi-create');
+    Route::get('dudi-edit/{id}', [DataController::class, 'editDudi'])->name('dudi-edit');
+    Route::post('dudi-edit/{id}', [DataController::class, 'updateDudi'])->name('dudi-edit');
+    Route::get('dudi-delete/{id}', [DataController::class, 'deleteDudi'])->name('dudi-delete');
 
 });
 

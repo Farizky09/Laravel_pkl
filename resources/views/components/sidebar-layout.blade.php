@@ -6,9 +6,9 @@
                     <h3>PKL</h3>
                 </div>
                 <div class="theme-toggle d-flex gap-2  align-items-center mt-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                        aria-hidden="true" role="img" class="iconify iconify--system-uicons" width="20"
-                        height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+                        role="img" class="iconify iconify--system-uicons" width="20" height="20"
+                        preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21">
                         <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round"
                             stroke-linejoin="round">
                             <path
@@ -50,51 +50,4 @@
             <i class="bi bi-justify fs-3"></i>
         </a>
     </header>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav m-auto mb-lg-0">
-        </ul>
-        <div class="dropdown">
-            <a href="#" data-bs-toggle="dropdown" aria-expanded="false" class="">
-                <div class="user-menu d-flex">
-                    <div class="user-name text-end me-3">
-                        <h6 class="mb-0 text-white">{{ Auth::user()->name }}</h6>
-                        <p class="mb-0 text-sm text-white">{{ Auth::user()->name }}</p>
-                    </div>
-                    <div class="user-img d-flex align-items-center">
-                        <div class="avatar avatar-md">
-                            <img src="assets/images/faces/1.jpg">
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton"
-                style="min-width: 11rem">
-                <li>
-                    <h6 class="dropdown-header">Halo, {{ Auth::user()->name }}!</h6>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="profile"><i class="icon-mid bi bi-person me-2"></i> My
-                        Profile</a>
-                </li>
-
-                <li>
-                    <hr class="dropdown-divider">
-                </li>
-                <li>
-                    <form action="{{ route('logout') }}" method="POST">
-                        @csrf
-                        <a class="dropdown-item" href="{{ route('logout') }}"
-                            onclick="event.preventDefault();
-                        this.closest('form').submit();"
-                            class='sidebar-link'>
-                            <i class="icon-mid bi bi-box-arrow-left me-2"></i>
-                            Logout
-                        </a>
-                    </form>
-
-                </li>
-            </ul>
-        </div>
-    </div>
-
 </nav>

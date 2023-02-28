@@ -6,7 +6,7 @@
 <script src="{{ asset('assets/js/dataTables.bootstrap5.min.js') }}"></script>
 
 <!-- Need: Apexcharts -->
-{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.4/apexcharts.min.js"></script> --}}
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="{{ asset('assets/js/apexcharts.min.js') }}"
     integrity="sha512-oUoSexkALUPd0BQaO/0m029XijXQ7XlFbPIhDNvzD8r2XhUjidiRo/8YhJGpoevLZVRwRFBvygSc9jV2TagjfQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
